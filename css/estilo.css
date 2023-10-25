@@ -1,0 +1,269 @@
+:root{
+    --primary-color: #693379;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(209, 203, 203);
+}
+
+.header{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    
+}
+
+.header-img{
+    text-align: center;
+}
+
+.header img{
+    display: inline-block;
+    max-width: 100%;
+    
+}
+
+.header nav{
+    background-color: #693379;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+
+}
+
+.header ul{
+    margin: 0;
+    padding: 0;
+}
+
+.header li{
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+    border: 0.1em solid black;
+    padding: 1em;
+    box-sizing: border-box;
+    max-height: 3.2em;
+}
+
+.header li:hover{
+    background-image: linear-gradient(45deg, white, #693379, white)
+    
+}
+.header a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    filter: drop-shadow(0.2em 0.2em 0.5em black);
+}
+
+.header li:hover a{
+    font-size: 1.2em;
+}
+
+
+.introducao{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 1.5em;
+    box-sizing: border-box;
+    color: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.introducao p{
+    text-align: justify;
+    font-weight: 400;
+}
+
+.introducao a{
+    color: white;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    border-radius: 0.3em;
+    font-weight: bold;
+    filter: drop-shadow(0 0 0.5em black);
+}
+
+.introducao a:hover{
+    padding: 1em 1.8em 1em 1.8em;
+    box-sizing: border-box;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+i{
+    font-size: 5em;
+    color: #693379;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 1.5em;
+}
+
+.row h3{
+    color: #693379;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.imagens{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+}
+.row-img{
+    display: flex;
+    flex-direction: column;
+}
+
+.row-img img{
+    display: inline-block;
+    max-width: 100%;
+}
+
+.row-img h3{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer{
+    background-color: #693379;
+    max-width: 100%;
+    padding: 4em;
+    text-align: center;
+}
+
+
+
+@media screen and (min-width:50em) {
+    .header{
+        flex-direction: row;
+        padding: 1.5em 0 1.5em 0;
+        max-height: 5em;
+        box-sizing: border-box;
+        overflow: hidden;
+        justify-content: space-between;
+        gap: 5em;
+        
+    }
+    
+    .header-img{
+        width: 35em;
+        box-sizing: border-box;
+    }
+    
+
+    .header nav{
+        margin: 0;
+        background-color: transparent;
+        
+    }
+    .header ul{
+        display: flex;
+        margin: 0;
+        max-height: 3em;
+        
+    }
+
+    .header li{
+        border: none;
+
+    }
+
+    .header a{
+        color: #693379;
+    }
+
+    .header li:hover{
+        background-image: none;
+    }
+
+    .introducao{
+        background-color: #693379;
+        color: white;
+        gap: 1.5em;
+    }
+
+    .introducao a{
+        background-color: #ffffff;
+        color: #693379;
+    }
+
+    .conteudo{
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        gap: 1em;
+        padding: 1em 0 1em;
+    }
+
+    .row{
+        width: calc(50% - 1em);
+        
+    }
+
+    .imagens{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 1.5em;
+    }
+
+    .row-img{
+        width: calc(50% - 3em - 1.5em);
+        flex-grow: 1;
+    }
+}
+
+@media screen and (min-width: 64em){
+    .introducao{
+        background-image: url(../images/bg_topo_1198x670.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 50vh;
+        text-shadow: 0em 0em 0.5em black;
+    }
+    .introducao a{
+        text-shadow: 0 0 0;
+    }
+}
+
+@media screen and (min-width: 75em) {
+    .introducao{
+        background-image: url(../images/bg_topo_1600x1374.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 80vh;
+    }
+
+    .row{
+        width: calc(25% - 1em)
+    }
+
+    .row-img{
+        width: calc(25% - 1.5em - 1.5em);
+    }
+}
